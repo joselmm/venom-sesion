@@ -2,16 +2,16 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "node-fetch": "^2.6.8",
     "venom-bot": "^4.3.7"
   },
   "name": "venom-session",
   "version": "1.0.0",
   "description": "api de endpint para mandar msg por whatsapp",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "node app.js",
-    "start":"node app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
