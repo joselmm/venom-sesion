@@ -1,3 +1,13 @@
+/*Dependencias de venom-bot
+(para poderlas instalar en linux -distribucion Debian):
+
+sudo apt-get install libxkbcommon-x11-0
+sudo apt-get install libgtk-3-0
+sudo apt-get install libgbm1
+
+*/
+
+
 const venom = require('venom-bot');
 const express = require('express')
 const cors = require('cors');
