@@ -38,12 +38,13 @@ venom
     console.log(erro);
   });
 
+app.use('/send-message/',json())
 function iniciarServidor(client){
 
-app.get('/send-message/:phonenumber/:text', async function (req, res) {
-    console.log(req.params);
+app.post('/send-message/', async function (req, res) {
+    console.log(req.body);
 
-        await client.sendText(req.params.phonenumber+'@c.us', req.params.text)
+        await client.sendText(req.body.phonenumber+'@c.us', req.body.text)
         .then((result) => {
             res.json(result);
             res.close()
