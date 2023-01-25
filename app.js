@@ -44,7 +44,7 @@ function iniciarServidor(client){
 app.post('/send-message/', async function (req, res) {
     console.log(req.body);
 
-        await client.sendText(req.body.phonenumber+'@c.us', req.body.text)
+        await client.sendText(req.body.phoneNumber+'@c.us', req.body.text)
         .then((result) => {
             res.json(result);
             res.close()
