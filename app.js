@@ -52,7 +52,7 @@ app.use('/send-message/',express.json())
 function iniciarServidor(client){
 
 app.post('/send-message/', async function (req, res) {
-    console.log(req.body);
+    //console.log(req.body);
 
         await client.sendText(req.body.phoneNumber+'@c.us', req.body.text)
         .then((result) => {
