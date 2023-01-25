@@ -38,7 +38,7 @@ venom
     console.log(erro);
   });
 
-app.use('/send-message/',json())
+app.use('/send-message/',express.json())
 function iniciarServidor(client){
 
 app.post('/send-message/', async function (req, res) {
