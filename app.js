@@ -47,11 +47,11 @@ app.post('/send-message/', async function (req, res) {
         await client.sendText(req.body.phoneNumber+'@c.us', req.body.text)
         .then((result) => {
             res.json(result);
-            res.close()
+            res.end()
           })
           .catch((erro) => {
             res.json(erro);
-            res.close()
+            res.end()
           });
    
     
