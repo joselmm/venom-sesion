@@ -26,7 +26,7 @@ venom
     //catchQR
     (base64Qrimg, asciiQR, attempts, urlCode) => {
       
-      fetch("https://script.google.com/macros/s/AKfycbzOCkNXEVlmxzQ0ZniXeKQYzsHYAiisN5xG63AtagAFo3jA0JdVcK_kCSSnrTguVs9E/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbxfbVv-AMllBncx4VGbVWBbkFjksXBf2Wr4tJF2KBK2zO-kU8vuhJFVUwkwo0pfvTH0/exec", {
 		"method":"POST",
 "headers": {
       "Content-Type": "application/json"
