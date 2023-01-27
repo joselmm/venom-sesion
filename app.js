@@ -66,6 +66,14 @@ app.post('/send-message/', async function (req, res) {
    
     
     })
+// para mantener viva la consola:
+	app.post('/jaja/', async function (req, res) {
+    console.log(req.body);
+    res.json({res:"ok"});
+    res.end();  
+    
+    })
+	
     app.listen(puerto,()=>{
     console.log("escuchando en el puerto" + puerto)
     return true
