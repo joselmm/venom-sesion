@@ -67,6 +67,7 @@ app.post('/send-message/', async function (req, res) {
     
     })
 // para mantener viva la consola:
+	app.use('/jaja/',express.json())
 	app.post('/jaja/', async function (req, res) {
     console.log(req.body);
     res.json({res:"ok"});
