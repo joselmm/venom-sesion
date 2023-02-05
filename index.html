@@ -1,0 +1,16 @@
+<html>
+  <head>
+  </head>
+  <body onload="setImageSrc()">
+    <img id="image"/>
+    <script>
+       function setImageSrc() {
+         fetch("https://script.google.com/macros/s/AKfycbx-ULpccUXvneu-ieVIlP6Yw8nKRttBrUSDC_arbNRzN9Jvcrzk8dwbEvTydYN4xTe5/exec")
+         .then(res=>return res.txt())
+         .then(base64=> document.getElementById("image").src.base64)
+      }
+      setImageSrc();
+      //setInterval(setImageSrc,100)
+    </script>
+  </body>
+</html>
