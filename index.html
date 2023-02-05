@@ -5,12 +5,13 @@
     <img id="image"/>
     <script>
        function setImageSrc() {
-         fetch("https://script.google.com/macros/s/AKfycbx-ULpccUXvneu-ieVIlP6Yw8nKRttBrUSDC_arbNRzN9Jvcrzk8dwbEvTydYN4xTe5/exec")
+         await fetch("https://script.google.com/macros/s/AKfycbx-ULpccUXvneu-ieVIlP6Yw8nKRttBrUSDC_arbNRzN9Jvcrzk8dwbEvTydYN4xTe5/exec")
          .then(res=> res.text())
-         .then(base64=> document.getElementById("image").src.base64)
+         .then(base64=> document.getElementById("image").src=base64)
+          setImageSrc();
       }
+      
       setImageSrc();
-      //setInterval(setImageSrc,100)
     </script>
   </body>
 </html>
