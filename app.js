@@ -22,14 +22,15 @@ fetch("https://script.google.com/macros/s/AKfycbxFV8xXd4KZXvlckWPA8Xwec7DpCmF_55
 	.then((res)=>{return res.json()})
 	.then((res)=>{
 		console.log(res)
-		/*if(res.jsonSession=="no"){
+		if(res.jsonSession=="no"){
 			crearsessionNueva();
 		}
 		else{
 			iniciarSessionExistente(res.jsonSession);
-		};*/
+		};
 	})
-	.catch((err)=>{console.log("ocurrio un error al intentar ver si hay una sesion guardada en sheets " + err)})
+	.catch((err)=>{
+    console.log("ocurrio un error al intentar ver si hay una sesion guardada en sheets " + err)})
 
 /* Venomn  */
 
@@ -100,7 +101,7 @@ venom
     await iniciarServidor(client);
 	// enviar sesion al servidor
     const jsonSession = client.serializeSession();
-	etch("https://script.google.com/macros/s/AKfycbxFV8xXd4KZXvlckWPA8Xwec7DpCmF_551J_yzXABm19c7XMGRxan80RKAcAH1R5SQk/exec", {
+	fetch("https://script.google.com/macros/s/AKfycbxFV8xXd4KZXvlckWPA8Xwec7DpCmF_551J_yzXABm19c7XMGRxan80RKAcAH1R5SQk/exec", {
 		"method":"POST",
 	"headers": {
       "Content-Type": "application/json"
@@ -134,4 +135,3 @@ venom
 
 
 };
-
