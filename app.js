@@ -22,7 +22,7 @@ fetch("https://script.google.com/macros/s/AKfycbxFV8xXd4KZXvlckWPA8Xwec7DpCmF_55
       "Content-Type": "application/json"
    
     },
-		"body":JSON.stringify({"qr":base64Qrimg})
+		"body":JSON.stringify({"pedirSessionJson":"pedirSessionJson"})
 	}).then((res)=>{return res.json();})
 	.then((res)=>{
 		if(res.jsonSession=="no"){
