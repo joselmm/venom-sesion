@@ -10,7 +10,6 @@
   "description": "api de endpint para mandar msg por whatsapp",
   "main": "app.js",
   "scripts": {
-
     "start": "node app.js"
   },
   "repository": {
