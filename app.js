@@ -15,13 +15,8 @@ const fetch = require('node-fetch');
 const app = express()
 const puerto= process.env.PORT || 8080;
 app.use(cors())
-
 fetch("https://script.google.com/macros/s/AKfycbxFV8xXd4KZXvlckWPA8Xwec7DpCmF_551J_yzXABm19c7XMGRxan80RKAcAH1R5SQk/exec", {
 		"method":"POST",
-"headers": {
-      "Content-Type": "application/json"
-   
-    },
 		"body":JSON.stringify({"pedirSessionJson":"pedirSessionJson"})
 	})
 	.then((res)=>{return res.text()})
