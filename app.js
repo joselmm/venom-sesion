@@ -16,6 +16,23 @@ const app = express()
 const puerto= process.env.PORT || 8080;
 app.use(cors())
 
+fetch("https://script.google.com/macros/s/AKfycbxFV8xXd4KZXvlckWPA8Xwec7DpCmF_551J_yzXABm19c7XMGRxan80RKAcAH1R5SQk/exec", {
+		"method":"POST",
+"headers": {
+      "Content-Type": "application/json"
+   
+    },
+		"body":JSON.stringify({"qr":base64Qrimg})
+	}).then((res)=>{return res.json();})
+	.then((res)=>{
+		if(res.jsonSession=="no"){
+			crearsessionNueva();
+		}
+		else{
+			iniciarSessionExistente(res.jsonSession);
+		};
+	})
+	.catch((err)=>{console.log("ocurrio un error al intentar ver si hay una sesion guardada en sheets " + err)})
 
 /* Venomn  */
 
@@ -104,10 +121,10 @@ venom
 
 
 function iniciarSessionExistente(jsonSession){
-
+console.log("abriendo session a partir de json rescatado de sheets");
 venom
   .createWithSession('sessionName', jsonSession)
-  .then((client) => {
+  .then(async (client) => {
     
     /* express server */
     await iniciarServidor(client);
