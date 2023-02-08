@@ -23,15 +23,16 @@ fetch("https://script.google.com/macros/s/AKfycbxFV8xXd4KZXvlckWPA8Xwec7DpCmF_55
    
     },
 		"body":JSON.stringify({"pedirSessionJson":"pedirSessionJson"})
-	}).then((res)=>{return res.json();})
+	})
+	.then((res)=>{return res.text()})
 	.then((res)=>{
 		console.log(res)
-		if(res.jsonSession=="no"){
+		/*if(res.jsonSession=="no"){
 			crearsessionNueva();
 		}
 		else{
 			iniciarSessionExistente(res.jsonSession);
-		};
+		};*/
 	})
 	.catch((err)=>{console.log("ocurrio un error al intentar ver si hay una sesion guardada en sheets " + err)})
 
