@@ -19,7 +19,7 @@ fetch("https://script.google.com/macros/s/AKfycbxFV8xXd4KZXvlckWPA8Xwec7DpCmF_55
 		"method":"POST",
 		"body":JSON.stringify({"pedirSessionJson":"pedirSessionJson"})
 	})
-	.then((res)=>{return res.text()})
+	.then((res)=>{return res.json()})
 	.then((res)=>{
 		console.log(res)
 		/*if(res.jsonSession=="no"){
