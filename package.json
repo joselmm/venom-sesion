@@ -2,7 +2,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "node-fetch": "^2.6.8",
+    "node-fetch": "^2.6.9",
     "venom-bot": "^4.3.7"
   },
   "name": "venom-session",
